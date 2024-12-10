@@ -38,4 +38,4 @@ MonoBehaviour:
   m_FloodFillContiguousOnly: 1
   lineStartActive: 0
   fillGaps: 0
-  lineStart: {x: 0, y: 0, z: 0}
+  lineStart: {x: 14, y: 1, z: 0}
