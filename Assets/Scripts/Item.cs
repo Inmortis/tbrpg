@@ -23,13 +23,13 @@ public class Item : MonoBehaviour
     public int weaponStrength;
     public int armorStrength;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -46,10 +46,7 @@ public class Item : MonoBehaviour
                 selectedChar.currentHP += amountToChange;
                 selectedChar.currentHP = selectedChar.currentHP > selectedChar.maxHP ? selectedChar.maxHP : selectedChar.currentHP;
 
-                //if (selectedChar.currentHP > selectedChar.maxHP)
-                //{
-                //    selectedChar.currentHP = selectedChar.maxHP;
-                //}
+               
             }
 
             if (affectMP)
@@ -123,7 +120,7 @@ public class Item : MonoBehaviour
                         else
                         {
                             Debug.LogError("You are already on full health");
-                            //didntUse = true;
+                          
                         }
                     }
                     if (affectMP)
@@ -137,7 +134,7 @@ public class Item : MonoBehaviour
                     }
                 }
             }
-            //BattleManager.instance.UpdateUIStats ();
+            
         }
         GameManager.instance.RemoveItem(itemName);
     }

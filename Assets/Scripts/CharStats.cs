@@ -24,7 +24,7 @@ public class CharStats : MonoBehaviour
     public string equippedArmor;
     public Sprite charImage;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         expToNextLevel = new int[maxLevel];
@@ -36,7 +36,7 @@ public class CharStats : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -56,7 +56,6 @@ public class CharStats : MonoBehaviour
                 currentEXP -= expToNextLevel[playerLevel];
                 playerLevel++;
 
-                // Determine whether to add to str or def based on odd or even
                 if (playerLevel % 2 == 0)
                 {
                     strength++;

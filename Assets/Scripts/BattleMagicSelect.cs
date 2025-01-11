@@ -9,13 +9,11 @@ public class BattleMagicSelect : MonoBehaviour
     public int spellCost;
     public Text nameText;
     public Text costText;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -31,7 +29,6 @@ public class BattleMagicSelect : MonoBehaviour
         } 
         else
         {
-            // TODO: let player know there is not enough MP
             BattleManager.instance.battleNotice.theText.text = "Not Enough MP!";
             BattleManager.instance.battleNotice.Activate();
             BattleManager.instance.magicMenu.SetActive(false);

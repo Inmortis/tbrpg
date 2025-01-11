@@ -19,13 +19,13 @@ public class BattleStarter : MonoBehaviour
     public bool shouldCompleteQuest;
     public string QuestToComplete;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         betweenBattleCounter = Random.Range(timeBetweenBattles * .5f, timeBetweenBattles * 1.5f);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (inArea && PlayerController.instance.canMove)

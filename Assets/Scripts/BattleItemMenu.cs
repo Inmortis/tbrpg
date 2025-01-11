@@ -18,14 +18,12 @@ public class BattleItemMenu : MonoBehaviour
     public static BattleItemMenu instance;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         

@@ -34,21 +34,19 @@ public class GameMenu : MonoBehaviour
 
     public string mainMenuName;
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         if (Input.GetButtonDown("Fire2"))
         {
             if (theMenu.activeInHierarchy)
             {
-                //theMenu.SetActive(false);
-                //GameManager.instance.gameMenuOpen = false;
+              
 
                 CloseMenu();
             }
@@ -129,7 +127,7 @@ public class GameMenu : MonoBehaviour
     {
         UpdateMainStats();
 
-        // Update the information that is shown
+        
         StatusChar(0);
 
         for (int i = 0; i < statusButtons.Length; i++)
@@ -258,6 +256,6 @@ public class GameMenu : MonoBehaviour
         Destroy(GameManager.instance.gameObject);
         Destroy(PlayerController.instance.gameObject);
         Destroy(AudioManager.instance.gameObject);
-        Destroy(gameObject); // GameMenu instance gameObject
+        Destroy(gameObject); 
     }
 }

@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
 
     public int currentGold;
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour
         SortItems();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (gameMenuOpen || dialogActive || fadingBetweenAreas || shopActive || battleActive)
@@ -74,11 +73,7 @@ public class GameManager : MonoBehaviour
 
     public void SortItems()
     {
-        // 0: ""
-        // 1: ""
-        // 2: "a"
-        // 3: ""
-        // 4: ""
+   
 
         bool itemAfterSpace = true;
 
@@ -116,7 +111,7 @@ public class GameManager : MonoBehaviour
             {
                 newItemPosition = i;
                 foundSpace = true;
-                i = itemsHeld.Length; // set i to the last index so for loop will stop
+                i = itemsHeld.Length;
             }
         }
 
@@ -129,7 +124,7 @@ public class GameManager : MonoBehaviour
                 if (referenceItems[i].itemName == itemToAdd)
                 {
                     itemExists = true;
-                    i = referenceItems.Length; // set i to the last index so for loop will stop
+                    i = referenceItems.Length; 
                 }
             }
 
@@ -158,7 +153,7 @@ public class GameManager : MonoBehaviour
             {
                 foundItem = true;
                 itemPosition = i;
-                i = itemsHeld.Length; // set i to the last index so for loop will stop
+                i = itemsHeld.Length; 
             }
         }
 
@@ -186,12 +181,12 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("Player_Position_y", PlayerController.instance.transform.position.y);
         PlayerPrefs.SetFloat("Player_Position_z", PlayerController.instance.transform.position.z);
 
-        // Save character info
+        
         for (int i = 0; i < playerStats.Length; i++)
         {
             if (playerStats[i].gameObject.activeInHierarchy)
             {
-                // Note: rename "Player3 Stat" in GameManager in Unity for this to work as intended
+               
                 PlayerPrefs.SetInt("Player_" + playerStats[i].charName + "_active", 1);
             }
             else
@@ -215,7 +210,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Player_" + playerStats[i].charName + "_active: " + PlayerPrefs.GetInt("Player_" + playerStats[i].charName + "_active"));
         }
 
-        // Store inventory data
+  
         for (int i = 0; i < itemsHeld.Length; i++)
         {
             PlayerPrefs.SetString("ItemInInventory_" + i, itemsHeld[i]);

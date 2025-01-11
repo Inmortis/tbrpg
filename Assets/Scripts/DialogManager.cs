@@ -21,15 +21,13 @@ public class DialogManager : MonoBehaviour
     private bool markQuestComplete;
     private bool shouldMarkQuest;
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
 
-        //dialogText.text = dialogLines[currentLine];
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (dialogBox.activeInHierarchy)

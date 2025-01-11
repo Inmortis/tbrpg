@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     public bool canMove = true;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         if (instance == null)
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (canMove)

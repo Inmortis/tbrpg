@@ -9,13 +9,13 @@ public class BattleNotification : MonoBehaviour
     private float awakeCounter;
     public Text theText;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         if (awakeCounter > 0)

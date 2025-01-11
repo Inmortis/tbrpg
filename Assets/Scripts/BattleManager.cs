@@ -53,19 +53,16 @@ public class BattleManager : MonoBehaviour
 
     public bool cannotFlee;
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            //BattleStart(new string[] { "Eyeball", "Spider", "Skeleton" }, false);
             BattleStart(new string[] { "Eyeball" }, false);
         }
 
@@ -81,7 +78,6 @@ public class BattleManager : MonoBehaviour
                 {
                     uiButtonsHolder.SetActive(false);
 
-                    // enemy should attack
                     StartCoroutine(EnemyMoveCo());
                 }
             }
@@ -188,7 +184,6 @@ public class BattleManager : MonoBehaviour
 
             if (activeBattlers[i].currentHP == 0)
             {
-                // Handle dead battler
                 if(activeBattlers[i].isPlayer)
                 {
                     activeBattlers[i].theSprite.sprite = activeBattlers[i].deadSprite;
@@ -216,18 +211,14 @@ public class BattleManager : MonoBehaviour
         {
             if (allEnemiesDead)
             {
-                // End battle in victory
                 StartCoroutine(EndBattleCo());
             }
             else
             {
-                // End battle in failure
                 StartCoroutine(GameOverCo());
             }
 
-            //battleScene.SetActive(false);
-            //GameManager.instance.battleActive = false;
-            //battleActive = false;
+          
         }
         else
         {
@@ -264,7 +255,6 @@ public class BattleManager : MonoBehaviour
 
         int selectedTarget = players[Random.Range(0, players.Count)];
 
-        // activeBattlers[selectedTarget].currentHP -= 30;
 
         int selectAttack = Random.Range(0, activeBattlers[currentTurn].movesAvailable.Length);
         int movePower = 0;
@@ -424,9 +414,7 @@ public class BattleManager : MonoBehaviour
             int fleeSuccess = Random.Range(0, 100);
             if (fleeSuccess < chanceToFlee)
             {
-                // end the battle
-                //battleActive = false;
-                //battleScene.SetActive(false);
+                
                 fleeing = true;
                 StartCoroutine(EndBattleCo());
             }
@@ -475,7 +463,7 @@ public class BattleManager : MonoBehaviour
         battleScene.SetActive(false);
         activeBattlers.Clear();
         currentTurn = 0;
-        //GameManager.instance.battleActive = false;
+
         if (fleeing)
         {
             GameManager.instance.battleActive = false;

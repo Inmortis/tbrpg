@@ -9,7 +9,7 @@ public class EssentialsLoader : MonoBehaviour
     public GameObject gameManager;
     public GameObject audioManager;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         if (UIFade.instance == null)
@@ -34,7 +34,6 @@ public class EssentialsLoader : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         

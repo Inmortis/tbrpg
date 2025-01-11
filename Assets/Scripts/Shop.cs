@@ -22,13 +22,12 @@ public class Shop : MonoBehaviour
     public Text buyItemName, buyItemDescription, buyItemValue;
     public Text sellItemName, sellItemDescription, sellItemValue;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         instance = this;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K) && !shopMenu.activeInHierarchy)

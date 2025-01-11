@@ -8,17 +8,15 @@ public class GameOver : MonoBehaviour
     public string mainMenuScene;
     public string loadGameScene;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         AudioManager.instance.PlayBGM(4);
 
-        //PlayerController.instance.gameObject.SetActive(false);
-        //GameMenu.instance.gameObject.SetActive(false);
-        //BattleManager.instance.gameObject.SetActive(false);
+        
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         

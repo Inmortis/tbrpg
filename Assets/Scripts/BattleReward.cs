@@ -16,13 +16,12 @@ public class BattleReward : MonoBehaviour
     public bool markQuestComplete;
     public string questToMark;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         instance = this;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Y))

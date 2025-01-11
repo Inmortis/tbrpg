@@ -13,7 +13,7 @@ public class UIFade : MonoBehaviour
     public bool shouldFadeToBlack;
     public bool shouldFadeFromBlack;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         instance = this;
@@ -21,7 +21,7 @@ public class UIFade : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (shouldFadeToBlack)
